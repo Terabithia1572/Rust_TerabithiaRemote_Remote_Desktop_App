@@ -1,0 +1,146 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 88,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 91,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 94,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 98,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 107,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 113,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 116,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Runtime",
+			"destination" : "C:/rustdesk/flutter/windows/out/install/x64-Debug",
+			"paths" : 
+			[
+				"runner/TerabithiaRemote.exe"
+			],
+			"targetId" : "TerabithiaRemote::@056c4f61b0156d1d9b06",
+			"targetIndex" : 0,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Runtime",
+			"destination" : "C:/rustdesk/flutter/windows/out/install/x64-Debug/data",
+			"paths" : 
+			[
+				"flutter/ephemeral/icudtl.dat"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Runtime",
+			"destination" : "C:/rustdesk/flutter/windows/out/install/x64-Debug",
+			"paths" : 
+			[
+				"flutter/ephemeral/flutter_windows.dll"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Runtime",
+			"destination" : "C:/rustdesk/flutter/windows/out/install/x64-Debug",
+			"paths" : 
+			[
+				"out/build/x64-Debug/plugins/desktop_drop/desktop_drop_plugin.dll",
+				"out/build/x64-Debug/plugins/desktop_multi_window/desktop_multi_window_plugin.dll",
+				"out/build/x64-Debug/plugins/file_selector_windows/file_selector_windows_plugin.dll",
+				"out/build/x64-Debug/plugins/flutter_custom_cursor/flutter_custom_cursor_plugin.dll",
+				"out/build/x64-Debug/plugins/flutter_gpu_texture_renderer/flutter_gpu_texture_renderer_plugin.dll",
+				"out/build/x64-Debug/plugins/screen_retriever/screen_retriever_plugin.dll",
+				"out/build/x64-Debug/plugins/texture_rgba_renderer/texture_rgba_renderer_plugin.dll",
+				"out/build/x64-Debug/plugins/uni_links_desktop/uni_links_desktop_plugin.dll",
+				"out/build/x64-Debug/plugins/url_launcher_windows/url_launcher_windows_plugin.dll",
+				"out/build/x64-Debug/plugins/window_manager/window_manager_plugin.dll",
+				"out/build/x64-Debug/plugins/window_size/window_size_plugin.dll"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Runtime",
+			"destination" : "C:/rustdesk/flutter/windows/out/install/x64-Debug",
+			"paths" : 
+			[
+				"../../target/debug/librustdesk.dll"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Runtime",
+			"type" : "code"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Runtime",
+			"destination" : "C:/rustdesk/flutter/windows/out/install/x64-Debug/data",
+			"paths" : 
+			[
+				"C:/rustdesk/flutter/build//flutter_assets"
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	}
+}

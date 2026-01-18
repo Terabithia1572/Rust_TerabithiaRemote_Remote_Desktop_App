@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=TerabithiaRemote
+NoDisplay=true
+MimeType=x-scheme-handler/terabithiaremote;
+TryExec=terabithiaremote
+Exec=terabithiaremote %u
+Icon=terabithiaremote
+Terminal=false
+Type=Application
+StartupNotify=false
+StartupWMClass=terabithiaremote

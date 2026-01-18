@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\flutter\\build",
+    "\\flutter\\build\\flutter_assets",
+    "\\flutter\\build\\flutter_assets\\packages",
+    "\\flutter\\build\\flutter_assets\\packages\\dash_chat_2",
+    "\\flutter\\build\\flutter_assets\\packages\\flex_color_picker",
+    "\\flutter\\build\\flutter_assets\\packages\\flex_color_picker\\assets",
+    "\\flutter\\build\\flutter_assets\\packages\\wakelock_plus",
+    "\\flutter\\build\\flutter_assets\\packages\\wakelock_plus\\assets",
+    "\\flutter\\build\\flutter_assets\\packages\\window_manager",
+    "\\flutter\\build\\flutter_assets\\packages\\window_manager\\images"
+  ],
+  "SelectedNode": "\\Cargo.toml",
+  "PreviewInSolutionExplorer": false
+}

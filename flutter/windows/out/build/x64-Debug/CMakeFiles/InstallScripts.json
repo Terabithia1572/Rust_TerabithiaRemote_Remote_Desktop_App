@@ -1,0 +1,20 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/cmake_install.cmake",
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/flutter/cmake_install.cmake",
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/runner/cmake_install.cmake",
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/plugins/desktop_drop/cmake_install.cmake",
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/plugins/desktop_multi_window/cmake_install.cmake",
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/plugins/file_selector_windows/cmake_install.cmake",
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/plugins/flutter_custom_cursor/cmake_install.cmake",
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/plugins/flutter_gpu_texture_renderer/cmake_install.cmake",
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/plugins/screen_retriever/cmake_install.cmake",
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/plugins/texture_rgba_renderer/cmake_install.cmake",
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/plugins/uni_links_desktop/cmake_install.cmake",
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/plugins/url_launcher_windows/cmake_install.cmake",
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/plugins/window_manager/cmake_install.cmake",
+		"C:/rustdesk/flutter/windows/out/build/x64-Debug/plugins/window_size/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
