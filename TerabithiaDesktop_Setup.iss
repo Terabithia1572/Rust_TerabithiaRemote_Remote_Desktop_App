@@ -40,8 +40,11 @@ WelcomeLabel1=TerabithiaRemote Kurulumuna Hoş Geldiniz
 WelcomeLabel2=Copyright © 2026 Yunus İNAN tarafından geliştirilmiştir tüm hakları saklıdır..!%n%nKod tabanı: RustDesk (AGPL-3.0).%n%nDevam etmek için İleri düğmesine tıklayınız.
 
 [Files]
-; Derleme çıktısı klasöründeki dosyaları (exe, dll, flutter_assets) alır.
-Source: "C:\Users\Yunus\Desktop\Rust_TerabithiaRemote_Remote_Desktop_App\target\release\*"; DestDir: "{app}"; Excludes: "installer,screenshots,*.iss,*.bak,dist,*.pdb"; Flags: ignoreversion recursesubdirs createallsubdirs
+; Explicit file checks: Inno Setup will fail if any required component is missing
+Source: "C:\Users\Yunus\Desktop\Rust_TerabithiaRemote_Remote_Desktop_App\target\release\TerabithiaRemote.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Yunus\Desktop\Rust_TerabithiaRemote_Remote_Desktop_App\target\release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Yunus\Desktop\Rust_TerabithiaRemote_Remote_Desktop_App\target\release\librustdesk.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Yunus\Desktop\Rust_TerabithiaRemote_Remote_Desktop_App\target\release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{group}\TerabithiaRemote"; Filename: "{app}\TerabithiaRemote.exe"; WorkingDir: "{app}"
