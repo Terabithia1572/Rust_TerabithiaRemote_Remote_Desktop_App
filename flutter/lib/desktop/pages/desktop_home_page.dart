@@ -428,6 +428,12 @@ class _DesktopHomePageState extends State<DesktopHomePage>
   }
 
   Widget buildHelpCards(String updateUrl) {
+    if (isWindows) {
+      if (systemError.isNotEmpty) {
+        return buildInstallCard("", systemError, "", () {});
+      }
+      return const SizedBox.shrink();
+    }
     if (!bind.isCustomClient() &&
         updateUrl.isNotEmpty &&
         !isCardClosed &&
@@ -458,23 +464,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       return buildInstallCard("", systemError, "", () {});
     }
 
-    if (isWindows && !bind.isDisableInstallation()) {
-      if (!bind.mainIsInstalled()) {
-        return buildInstallCard(
-            "", bind.isOutgoingOnly() ? "" : "install_tip", "Install",
-            () async {
-          await rustDeskWinManager.closeAllSubWindows();
-          bind.mainGotoInstall();
-        });
-      } else if (bind.mainIsInstalledLowerVersion()) {
-        return buildInstallCard(
-            "Status", "Your installation is lower version.", "Click to upgrade",
-            () async {
-          await rustDeskWinManager.closeAllSubWindows();
-          bind.mainUpdateMe();
-        });
-      }
-    } else if (isMacOS) {
+    if (isMacOS) {
       final isOutgoingOnly = bind.isOutgoingOnly();
       if (!(isOutgoingOnly || bind.mainIsCanScreenRecording(prompt: false))) {
         return buildInstallCard("Permissions", "config_screen", "Configure",

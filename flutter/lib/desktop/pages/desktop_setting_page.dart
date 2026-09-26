@@ -2532,7 +2532,7 @@ class _AboutState extends State<_About> {
       final scrollController = ScrollController();
       return SingleChildScrollView(
         controller: scrollController,
-        child: _Card(title: 'About TerabithiaRemote', children: [
+        child: _Card(title: 'About RustDesk', children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -2565,38 +2565,20 @@ class _AboutState extends State<_About> {
                     launchUrlString('https://github.com/terabithia1572');
                   },
                   child: Text(
-                    'GitHub',
-                    style: linkStyle,
-                  ).marginSymmetric(vertical: 4.0)),
-              InkWell(
-                  onTap: () {
-                    launchUrlString('https://github.com/rustdesk/rustdesk');
-                  },
-                  child: Text(
-                    'RustDesk (Upstream AGPL-3.0)',
+                    'Geliştirici GitHub',
                     style: linkStyle,
                   ).marginSymmetric(vertical: 4.0)),
               Container(
                 decoration: const BoxDecoration(color: Color(0xFF2c8cff)),
                 padding:
-                    const EdgeInsets.symmetric(vertical: 24, horizontal: 8),
+                    const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
                 child: SelectionArea(
                     child: Row(
                   children: [
                     Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Copyright © 2026 Yunus İNAN tarafından geliştirilmiştir tüm hakları saklıdır..!',
-                            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                          ),
-                          const SizedBox(height: 6.0),
-                          Text(
-                            'Kod tabanı: RustDesk ($license)',
-                            style: const TextStyle(color: Colors.white70, fontSize: 12),
-                          ),
-                        ],
+                      child: Text(
+                        'Copyright © 2026 Yunus İNAN tarafından geliştirilmiştir tüm hakları saklıdır..!',
+                        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ],
