@@ -5,10 +5,10 @@
 // 'flutter create' template.
 
 // The application's name. By default this is also the title of the Flutter window.
-PRODUCT_NAME = TerabithiaRemote
+PRODUCT_NAME = RustDesk
 
 // The application's bundle identifier
 PRODUCT_BUNDLE_IDENTIFIER = com.carriez.flutterHbb
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Bu Program Mu.Asb.Çvş Yunus İNAN 2024-B.37 tarafından yazılmıştır tüm hakları saklıdır..
+PRODUCT_COPYRIGHT = Copyright © 2026 Purslane Tech Pte. Ltd. All rights reserved.

@@ -2,23 +2,23 @@
 <component type="desktop-application">
   <id>com.rustdesk.RustDesk</id>
   <developer id="com.rustdesk">
-    <name>TerabithiaRemote</name>
+    <name>RustDesk</name>
   </developer>
   <launchable type="desktop-id">com.rustdesk.RustDesk.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>AGPL-3.0-only</project_license>
-  <name>TerabithiaRemote</name>
+  <name>RustDesk</name>
   <summary>Secure remote desktop access</summary>
   <description>
     <p>
-        TerabithiaRemote is a full-featured open source remote control alternative for self-hosting and security with minimal configuration.
+        RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration.
     </p>
     <ul>
       <li> Works on Windows, macOS, Linux, iOS, Android, Web. </li>
       <li> Supports VP8 / VP9 / AV1 software codecs, and H264 / H265 hardware codecs. </li>
       <li> Own your data, easily set up self-hosting solution on your infrastructure. </li>
       <li> P2P connection with end-to-end encryption based on NaCl. </li>
-      <li> No administrative privileges or installation needed for Windows, elevate priviledge locally or from remote on demand. </li>
+      <li> No administrative privileges or installation needed for Windows, elevate privilege locally or from remote on demand. </li>
       <li> We like to keep things simple and will strive to make simpler where possible. </li>
     </ul>
     <p>

@@ -303,7 +303,7 @@ class FloatingWindowService : Service(), View.OnTouchListener {
      private fun showPopupMenu() {
          val popupMenu = PopupMenu(this, floatingView)
          val idShowRustDesk = 0
-         popupMenu.menu.add(0, idShowRustDesk, 0, translate("Show TerabithiaRemote"))
+         popupMenu.menu.add(0, idShowRustDesk, 0, translate("Show RustDesk"))
          // For host side, clipboard sync
          val idSyncClipboard = 1
          val isServiceSyncEnabled = (MainActivity.rdClipboardManager?.isCaptureStarted ?: false) && FFI.isServiceClipboardEnabled()
@@ -311,7 +311,10 @@ class FloatingWindowService : Service(), View.OnTouchListener {
              popupMenu.menu.add(0, idSyncClipboard, 0, translate("Update client clipboard"))
          }
          val idStopService = 2
-         popupMenu.menu.add(0, idStopService, 0, translate("Stop service"))
+         val hideStopService = FFI.getBuildinOption("hide-stop-service") == "Y"
+         if (!hideStopService) {
+             popupMenu.menu.add(0, idStopService, 0, translate("Stop service"))
+         }
          popupMenu.setOnMenuItemClickListener { menuItem ->
              when (menuItem.itemId) {
                  idShowRustDesk -> {
@@ -389,4 +392,3 @@ class FloatingWindowService : Service(), View.OnTouchListener {
         return false
     }
 }
-
