@@ -14,9 +14,9 @@
 
 En güncel Windows sürümü buradan indirilebilir:
 
-➡ **[Terabithia Desktop — Windows Setup](https://drive.google.com/file/d/10BE3uNFZIHLNq87-M168Qa0m6KK0A_LC/view?usp=sharing)**
+➡ **[Terabithia Desktop — Windows Setup](https://drive.google.com/file/d/16Q-0dMW6E8oLKxgvl5vbb2woJwQN1V5y/view?usp=sharing)**
 
-> Sürüm: 1.4.5 Edition  
+> Sürüm: 1.5.0 Edition  
 > Platform: Windows x64  
 
 
