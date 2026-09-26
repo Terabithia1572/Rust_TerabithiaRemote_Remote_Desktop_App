@@ -2,7 +2,7 @@
   <img src="screenshots/terabithiaremote1.png" alt="TerabithiaRemote Logo" width="512" height="512"/>
 </p>
 
-<h1 align="center">TerabithiaRemote</h1>
+<h1 align="center">Terabithia Desktop</h1>
 
 <p align="center">
   RustDesk (v1.5.0) tabanlı özelleştirilmiş uzak masaüstü istemcisi<br>
@@ -13,7 +13,7 @@
 
 ## 📥 İndirme ve Kurulum
 
-TerabithiaRemote Windows yükleyicisi ve kaynak kodları bu depo üzerinden temin edilebilir:
+Terabithia Desktop Windows yükleyicisi (`TerabithiaDesktop-Setup.exe`) ve kaynak kodları bu depo üzerinden temin edilebilir:
 
 - **Sürüm**: 1.5.0 (Upstream RustDesk `1.5.0` tabanlı)
 - **Platform**: Windows x64
@@ -25,7 +25,7 @@ TerabithiaRemote Windows yükleyicisi ve kaynak kodları bu depo üzerinden temi
 Bu çalışma:
 
 - **RustDesk 1.5.0** tabanlı modern ve güvenli uzak bağlantı deneyimini
-- Kişisel marka (**TerabithiaRemote**) altında
+- Kişisel marka (**Terabithia Desktop**) altında
 - Windows odaklı kullanım senaryoları için
 - Kullanımı sadeleştirilmiş ve özelleştirilmiş bir biçimde sunmayı hedefler.
 

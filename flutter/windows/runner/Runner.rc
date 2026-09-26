@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "Yunus İNAN" "\0"
-            VALUE "FileDescription", "Terabithia Remote Remote Desktop" "\0"
+            VALUE "FileDescription", "Terabithia Desktop Remote Desktop" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "TerabithiaRemote" "\0"
+            VALUE "InternalName", "TerabithiaDesktop" "\0"
             VALUE "LegalCopyright", "Copyright © 2026 Yunus İNAN. All rights reserved." "\0"
-            VALUE "OriginalFilename", "TerabithiaRemote.exe" "\0"
-            VALUE "ProductName", "Terabithia Remote" "\0"
+            VALUE "OriginalFilename", "TerabithiaDesktop.exe" "\0"
+            VALUE "ProductName", "Terabithia Desktop" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
