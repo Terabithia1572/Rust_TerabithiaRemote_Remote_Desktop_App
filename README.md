@@ -1,31 +1,31 @@
 <p align="center">
-  <img src="screenshots/terabithiaremote1.png" alt="Terabithia Desktop Logo" width="512" height="512"/>
+  <img src="screenshots/terabithiaremote1.png" alt="TerabithiaRemote Logo" width="512" height="512"/>
 </p>
 
-<h1 align="center">Terabithia Desktop</h1>
+<h1 align="center">TerabithiaRemote</h1>
 
 <p align="center">
-  RustDesk tabanlı özelleştirilmiş uzak masaüstü istemcisi<br>
+  RustDesk (v1.5.0) tabanlı özelleştirilmiş uzak masaüstü istemcisi<br>
   Windows odaklı, sade ve markalı bağlantı deneyimi
 </p>
 
 ---
-## 📥 İndirme
 
-En güncel Windows sürümü buradan indirilebilir:
+## 📥 İndirme ve Kurulum
 
-➡ **[Terabithia Desktop — Windows Setup](https://drive.google.com/file/d/10BE3uNFZIHLNq87-M168Qa0m6KK0A_LC/view?usp=sharing)**
+TerabithiaRemote Windows yükleyicisi ve kaynak kodları bu depo üzerinden temin edilebilir:
 
-> Sürüm: 1.4.5 Edition  
-> Platform: Windows x64  
+- **Sürüm**: 1.5.0 (Upstream RustDesk `1.5.0` tabanlı)
+- **Platform**: Windows x64
 
+---
 
 ## 🎯 Amaç ve Kapsam
 
 Bu çalışma:
 
-- RustDesk tabanlı bir uzak bağlantı deneyimini
-- Kişisel marka (Terabithia) altında
+- **RustDesk 1.5.0** tabanlı modern ve güvenli uzak bağlantı deneyimini
+- Kişisel marka (**TerabithiaRemote**) altında
 - Windows odaklı kullanım senaryoları için
 - Kullanımı sadeleştirilmiş ve özelleştirilmiş bir biçimde sunmayı hedefler.
 
@@ -34,14 +34,13 @@ Bu çalışma:
 ## 🖥️ Özellikler
 
 - Uzak masaüstü bağlantısı
-- ID + Parola ile bağlantı mantığı
-- Dosya transferi
-- Güvenlik izinleri
-- Tema desteği (Sistem / Açık / Koyu)
-- Görüntü ve kodlayıcı seçenekleri
-- Yazıcı yönlendirme (Remote Print)
-- Kayıt ve oturum izleme
-- Self-host destekli kullanım (isteğe bağlı)
+- ID + Parola ile bağlantı ve yetkilendirme
+- Güvenli dosya transferi
+- Güvenlik ve erişim izinleri yönetimi
+- Koyu / Açık tema desteği
+- Görüntü kalitesi ve codec ayarları
+- Uzak yazıcı yönlendirme (Remote Printing)
+- Oturum yönetimi ve kayıt imkanı
 
 ---
 
@@ -52,25 +51,27 @@ Bu çalışma:
 ![Güvenlik](screenshots/security.png)
 ![Ağ](screenshots/network.png)
 ![Görüntü](screenshots/view.png)
-![Hesap](screenshots/account.png)
 ![Yazıcı](screenshots/printer.png)
 ![Hakkında](screenshots/about.png)
-![Uzak Bağlantı](screenshots/remote.png)
 
 ---
 
 ## 🔧 Derleme / Geliştirme
 
-Bu proje RustDesk’in derleme altyapısını temel alır.
+Bu proje **RustDesk 1.5.0** derleme altyapısını temel alır.
 
-Geliştirici ortamı için:
+Geliştirici ortamı gereksinimleri:
 
-- Rust
-- Flutter (Windows Desktop)
-- Visual Studio / MSVC toolchain
-- CMake
+- **Rust** (1.75+)
+- **Flutter** (Windows Desktop SDK)
+- **Visual Studio / MSVC Toolchain**
+- **LLVM / Clang & CMake**
 
-gereklidir.
+Derleme komutu:
+
+```powershell
+python build.py --flutter
+```
 
 ---
 
@@ -86,16 +87,14 @@ Bu nedenle bu çalışma da **AGPL-3.0** lisans koşullarını takip eder.
 
 Telif ve attribution gereklilikleri açısından:
 
-- Orijinal kaynak RustDesk’e aittir.
+- Orijinal kaynak kodu ve temel mimari **RustDesk** projesine aittir.
 - Bu repo markalaştırılmış ve özelleştirilmiş bir türev çalışmadır.
 - Ticari kullanım veya yeniden dağıtım planlarında AGPL-3.0 şartları geçerlidir.
-
-Bu çalışma **öğrenme, deney ve kişisel kullanım senaryoları** üzerine tasarlanmıştır.
 
 ---
 
 ## 👤 Geliştirici
 
-- Terabithia / Yunus
-- GitHub: https://github.com/Terabithia1572
-
+- **Yunus İNAN**
+- **GitHub Profile**: https://github.com/terabithia1572
+- **Instagram**: https://www.instagram.com/yunusiinan/

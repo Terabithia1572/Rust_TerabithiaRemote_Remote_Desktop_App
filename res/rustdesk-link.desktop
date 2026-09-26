@@ -1,11 +1,11 @@
 [Desktop Entry]
-Name=TerabithiaRemote
+Name=RustDesk
 NoDisplay=true
-MimeType=x-scheme-handler/terabithiaremote;
-TryExec=terabithiaremote
-Exec=terabithiaremote %u
-Icon=terabithiaremote
+MimeType=x-scheme-handler/rustdesk;
+TryExec=rustdesk
+Exec=rustdesk %u
+Icon=rustdesk
 Terminal=false
 Type=Application
 StartupNotify=false
-StartupWMClass=terabithiaremote
+StartupWMClass=rustdesk

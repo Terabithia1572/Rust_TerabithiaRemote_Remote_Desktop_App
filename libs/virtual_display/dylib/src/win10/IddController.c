@@ -79,7 +79,7 @@ BOOL InstallUpdate(LPCWSTR fullInfPath, PBOOL rebootRequired)
     // UpdateDriverForPlugAndPlayDevicesW may return FALSE while driver was successfully installed...
     if (FALSE == UpdateDriverForPlugAndPlayDevicesW(
         NULL,
-        L"TerabithiaRemoteIddDriver",    // match hardware id in the inf file
+        L"RustDeskIddDriver",    // match hardware id in the inf file
         fullInfPath,
         INSTALLFLAG_FORCE
             // | INSTALLFLAG_NONINTERACTIVE  // INSTALLFLAG_NONINTERACTIVE may cause error 0xe0000247
@@ -94,10 +94,10 @@ BOOL InstallUpdate(LPCWSTR fullInfPath, PBOOL rebootRequired)
             switch (error)
             {
             case 0x109:
-                SetLastMsg("Failed InstallUpdate UpdateDriverForPlugAndPlayDevicesW, error: 0x%x, %s  Please try: Reinstall TerabithiaRemote with the cert option.\n", error, errorString == NULL ? "(NULL)\n" : errorString);
+                SetLastMsg("Failed InstallUpdate UpdateDriverForPlugAndPlayDevicesW, error: 0x%x, %s  Please try: Reinstall RustDesk with the cert option.\n", error, errorString == NULL ? "(NULL)\n" : errorString);
                 break;
             case 0xe0000247:
-                SetLastMsg("Failed InstallUpdate UpdateDriverForPlugAndPlayDevicesW, error: 0x%x, %s  Please try: \n1. Check the device manager and event viewer.\n2. Uninstall \"TerabithiaRemoteIddDriver Device\" in device manager, then reinstall TerabithiaRemote with the cert option.\n", error, errorString == NULL ? "(NULL)\n" : errorString);
+                SetLastMsg("Failed InstallUpdate UpdateDriverForPlugAndPlayDevicesW, error: 0x%x, %s  Please try: \n1. Check the device manager and event viewer.\n2. Uninstall \"RustDeskIddDriver Device\" in device manager, then reinstall RustDesk with the cert option.\n", error, errorString == NULL ? "(NULL)\n" : errorString);
                 break;
             default:
                 SetLastMsg("Failed InstallUpdate UpdateDriverForPlugAndPlayDevicesW, error: 0x%x, %s  Please try: Check the device manager and event viewer.\n", error, errorString == NULL ? "(NULL)\n" : errorString);
@@ -265,12 +265,12 @@ BOOL DeviceCreateWithLifetime(SW_DEVICE_LIFETIME *lifetime, PHSWDEVICE hSwDevice
     DeviceCreateCallbackContext callbackContext = { hEvent, lifetime, E_FAIL, };
 
     SW_DEVICE_CREATE_INFO createInfo = { 0 };
-    PCWSTR description = L"TerabithiaRemote Idd Driver";
+    PCWSTR description = L"RustDesk Idd Driver";
 
     // These match the Pnp id's in the inf file so OS will load the driver when the device is created
-    PCWSTR instanceId = L"TerabithiaRemoteIddDriver";
-    PCWSTR hardwareIds = L"TerabithiaRemoteIddDriver\0\0";
-    PCWSTR compatibleIds = L"TerabithiaRemoteIddDriver\0\0";
+    PCWSTR instanceId = L"RustDeskIddDriver";
+    PCWSTR hardwareIds = L"RustDeskIddDriver\0\0";
+    PCWSTR compatibleIds = L"RustDeskIddDriver\0\0";
 
     createInfo.cbSize = sizeof(createInfo);
     createInfo.pszzCompatibleIds = compatibleIds;
@@ -283,7 +283,7 @@ BOOL DeviceCreateWithLifetime(SW_DEVICE_LIFETIME *lifetime, PHSWDEVICE hSwDevice
         SWDeviceCapabilitiesDriverRequired;
 
     // Create the device
-    HRESULT hr = SwDeviceCreate(L"TerabithiaRemoteIddDriver",
+    HRESULT hr = SwDeviceCreate(L"RustDeskIddDriver",
         L"HTREE\\ROOT\\0",
         &createInfo,
         0,

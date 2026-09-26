@@ -36,8 +36,28 @@ class RelativeMouseState {
 }
 
 class MainFlutterWindow: NSWindow {
+    private static let fullscreenWorkAreaSizes = NSMapTable<NSWindow, NSValue>(
+        keyOptions: [.weakMemory, .objectPointerPersonality],
+        valueOptions: .strongMemory
+    )
+    private static let fullscreenObserver = NotificationCenter.default.addObserver(
+        forName: NSWindow.willEnterFullScreenNotification,
+        object: nil,
+        queue: .main
+    ) { notification in
+        guard let window = notification.object as? NSWindow,
+              let screen = window.screen else {
+            return
+        }
+        fullscreenWorkAreaSizes.setObject(
+            NSValue(size: screen.visibleFrame.size),
+            forKey: window
+        )
+    }
+
     override func awakeFromNib() {
         rustdesk_core_main();
+        _ = MainFlutterWindow.fullscreenObserver
         let flutterViewController = FlutterViewController.init()
         let windowFrame = self.frame
         self.contentViewController = flutterViewController
@@ -93,7 +113,7 @@ class MainFlutterWindow: NSWindow {
         // Do this FIRST before setting any state
         let result = CGAssociateMouseAndMouseCursorPosition(0)
         if result != CGError.success {
-            NSLog("[TerabithiaRemote] Failed to dissociate mouse from cursor position: %d", result.rawValue)
+            NSLog("[RustDesk] Failed to dissociate mouse from cursor position: %d", result.rawValue)
             return false
         }
 
@@ -135,7 +155,7 @@ class MainFlutterWindow: NSWindow {
 
         // Check if monitor was created successfully
         if state.eventMonitor == nil {
-            NSLog("[TerabithiaRemote] Failed to create event monitor for relative mouse mode")
+            NSLog("[RustDesk] Failed to create event monitor for relative mouse mode")
             // Re-associate mouse since we failed
             CGAssociateMouseAndMouseCursorPosition(1)
             state.deltaChannel = nil
@@ -167,12 +187,12 @@ class MainFlutterWindow: NSWindow {
         // Re-associate mouse with cursor position (non-blocking with async retry)
         let result = CGAssociateMouseAndMouseCursorPosition(1)
         if result != CGError.success {
-            NSLog("[TerabithiaRemote] Failed to re-associate mouse with cursor position: %d, scheduling retry...", result.rawValue)
+            NSLog("[RustDesk] Failed to re-associate mouse with cursor position: %d, scheduling retry...", result.rawValue)
             // Non-blocking retry after 50ms
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
                 let retryResult = CGAssociateMouseAndMouseCursorPosition(1)
                 if retryResult != CGError.success {
-                    NSLog("[TerabithiaRemote] Retry failed to re-associate mouse: %d. Cursor may remain locked.", retryResult.rawValue)
+                    NSLog("[RustDesk] Retry failed to re-associate mouse: %d. Cursor may remain locked.", retryResult.rawValue)
                 }
             }
         }
@@ -277,6 +297,16 @@ class MainFlutterWindow: NSWindow {
                 case "disableNativeRelativeMouseMode":
                     self.disableNativeRelativeMouseMode()
                     result(true)
+
+                case "getMacOSWorkAreaSize":
+                    guard Thread.isMainThread,
+                          let window = registrar.view?.window,
+                          let size = MainFlutterWindow.fullscreenWorkAreaSizes
+                            .object(forKey: window)?.sizeValue else {
+                        result(nil)
+                        break
+                    }
+                    result([Double(size.width), Double(size.height)])
 
                 default:
                     result(FlutterMethodNotImplemented)
